@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
 public class Collaborateur {
+	private static int counter = 1;
 	private String matricule;
 	private String nom;
 	private String prenom;
@@ -15,10 +16,11 @@ public class Collaborateur {
 	private ZonedDateTime dateHeureCreation;
 	private boolean actif;
 	
-	public void Collaborateur (String matricule,String nom,String prenom,
+	public Collaborateur (String matricule,String nom,String prenom,
 			LocalDate dateDeNaissance,String adresse,String secu,String emailPro,
 			String photo,ZonedDateTime dateHeureCreation,boolean actif) {
 		this.matricule=matricule;
+		counter++;
 		this.nom=nom;
 		this.prenom=prenom;
 		this.dateDeNaissance=dateDeNaissance;
@@ -92,6 +94,16 @@ public class Collaborateur {
 	}
 	public void setActif(boolean actif) {
 		this.actif = actif;
+	}
+
+
+	public static int getCounter() {
+		return counter;
+	}
+
+
+	public static void setCounter(int counter) {
+		Collaborateur.counter = counter;
 	}
 	
 	
