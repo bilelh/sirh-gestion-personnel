@@ -18,7 +18,7 @@
 		<h1>Nouveau Collaborateur</h1>
 		
 		<div class="container">
-		<form>
+		<form method="POST">
 			<div class="form-group row">
 				<label for="inputNom" class="col-sm-4 col-form-label">Nom</label>
 				<div class="col-sm-5">

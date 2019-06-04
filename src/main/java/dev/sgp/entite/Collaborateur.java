@@ -16,6 +16,9 @@ public class Collaborateur {
 	private ZonedDateTime dateHeureCreation;
 	private boolean actif;
 	
+	private String intitulePoste;
+	private Departement departement;
+	
 	public Collaborateur (String matricule,String nom,String prenom,
 			LocalDate dateDeNaissance,String adresse,String secu,String emailPro,
 			String photo,ZonedDateTime dateHeureCreation,boolean actif) {
@@ -95,15 +98,31 @@ public class Collaborateur {
 	public void setActif(boolean actif) {
 		this.actif = actif;
 	}
-
-
 	public static int getCounter() {
 		return counter;
 	}
-
-
 	public static void setCounter(int counter) {
 		Collaborateur.counter = counter;
+	}
+
+
+	public String getIntitulePoste() {
+		return intitulePoste;
+	}
+
+
+	public void setIntitulePoste(String intitulePoste) {
+		this.intitulePoste = intitulePoste;
+	}
+
+
+	public Departement getDepartement() {
+		return departement;
+	}
+
+
+	public void setDepartement(Departement departement) {
+		this.departement = departement;
 	}
 	
 	

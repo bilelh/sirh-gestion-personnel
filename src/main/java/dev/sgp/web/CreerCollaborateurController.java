@@ -63,7 +63,7 @@ public class CreerCollaborateurController extends HttpServlet {
 		req.setAttribute("listeCollaborateurs", collaborateurService.listerCollaborateurs());
 		
 		// On redirige sur la page de liste de collaborateurs
-		getServletContext().getRequestDispatcher("/WEB-INF/views/collab/listerCollaborateurs.jsp")
+		req.getRequestDispatcher("/WEB-INF/views/collab/listerCollaborateurs.jsp")
 		.forward(req, resp);
 		}
 	}
